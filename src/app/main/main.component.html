@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col"><h3><p>Список валют</p></h3>
+    <li *ngFor="let customer of currencies">
+      <h4><p>{{customer.code}} - {{customer.rate}}</p></h4>
+    </li>
+
+  </div>
+  <div class="col"><h3><p>Пользователь {{nameUser}} счет: 10000$</p></h3>
+  <div class="text-center"><h3><p>Сделать ставку</p></h3></div>
+    <div class="row">
+      <div class="col">
+        <label for="sel1"><p>Валюта</p></label>
+        <select class="form-control" [ngModel]="this.currency">
+          <option *ngFor="let currency of currencies" [ngValue]="currency" [selected]="currency.code === currency.code">{{currency.code}}</option>
+        </select>
+        <label for="sel2"><p>Сумма</p></label>
+        <input class="form-control">
+      </div>
+      <div class="col">
+        <label for="sel3"><p>Вектор ставки</p></label>
+        <select class="form-control" id="sel2">
+          <option><p>Понижение</p></option>
+          <option><p>Повышение</p></option>
+          <option><p>Равно</p></option>
+        </select>
+        <label for="sel4"><p>Время ставки</p></label>
+        <select class="form-control" id="sel4">
+          <option><p>30 сек</p></option>
+          <option><p>1 минута</p></option>
+          <option><p>2 минуты</p></option>
+        </select>
+      </div>
+    </div>
+    <label for="sel5"> </label>
+    <button type="button" class="btn btn-success form-control" (click)="betMake()"><h3><p>Сделать ставку</p></h3></button>
+
+  </div>
+  <div class="col"><h3><p>Список пользователей</p></h3>
+      <li *ngFor="let user of users">
+        <h4><p>{{user.name}} - {{user.balance}}</p></h4>
+      </li>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="text-center">
+      <h3><p>Лента</p></h3>
+    </div>
+  </div>
+</div>

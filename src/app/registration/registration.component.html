@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Введите ваше имя</h5>
+          <form class="form-signin">
+            <div class="form-label-group">
+              <input [(ngModel)]="name" [ngModelOptions]="{standalone: true}" type="text" id="name" class="form-control" required autofocus>
+              <label for="name"> </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="myEvent()">Войти</button>
+            <hr class="my-4">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
