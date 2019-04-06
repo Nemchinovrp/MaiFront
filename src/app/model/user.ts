@@ -1,7 +1,5 @@
 export class User {
-
+  private id?: number;
   private name?: string;
-  private balance?: number;
-  private bets?: Array<number>;
-  private generated: boolean;
+  private password?: string;
 }

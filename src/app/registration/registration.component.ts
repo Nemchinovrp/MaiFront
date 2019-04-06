@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {StorageService} from '../service/storage.service';
+import {UserService} from '../service/user.service';
 
 
 @Component({
@@ -10,15 +10,29 @@ import {StorageService} from '../service/storage.service';
 })
 export class RegistrationComponent implements OnInit {
   name: string;
+  password: string;
 
-  constructor(private router: Router, private storage: StorageService) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
 
   myEvent() {
+    console.log(this.name + this.password);
+    this.userService.getUser().subscribe(
+      user => {
+        if(this.name === user.valueOf().name && this.password === user.valueOf().password) {
+          this.router.navigate(['main']);
+        } else {
+          alert('Неправильный логин или пароль');
+        }
+        console.log(user);
+      },
+      err => {
+        console.log(err);
+      }
+    );
     // alert('HEllo --  ' + this.name);
-    this.router.navigate(['main']);
-    this.storage.saveToken(this.name);
+
   }
 }
