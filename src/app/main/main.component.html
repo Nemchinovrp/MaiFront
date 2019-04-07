@@ -2,62 +2,77 @@
   <div class="col-12">
     <div class="text-center">
       <h3 style="margin-top: 20px">Динамика трудовых ресурсов</h3>
-      <br>
-      <table class="table" style="margin-top: 30px">
-        <thead>
-        <th>Округ</th>
-        <th>2015</th>
-        <th>2016</th>
-        <th>2017</th>
-        <th>2018</th>
-        <th>2019</th>
-        <th>2020</th>
-        <th>2021</th>
-        <th>2022</th>
-        </thead>
-        <tbody>
-        <tr *ngFor="let hero of dynamics">
-          <td>{{hero.district}}</td>
-          <td>{{hero.one}}</td>
-          <td>{{hero.two}}</td>
-          <td>{{hero.three}}</td>
-          <td>{{hero.four}}</td>
-          <td>{{hero.five}}</td>
-          <td>{{hero.six}}</td>
-          <td>{{hero.seven}}</td>
-          <td>{{hero.eight}}</td>
-        </tr>
-        </tbody>
-      </table>
     </div>
+    <div class="row" style="margin-top: 30px">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div style="text-align: center">
+          <table class="table table-bordered" style="margin-top: 30px; max-width: 1400px">
+            <thead>
+            <th>Округ</th>
+            <th>2015</th>
+            <th>2016</th>
+            <th>2017</th>
+            <th>2018</th>
+            <th>2019</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let hero of dynamics">
+              <td>{{hero.district}}</td>
+              <td>{{hero.one}}</td>
+              <td>{{hero.two}}</td>
+              <td>{{hero.three}}</td>
+              <td>{{hero.four}}</td>
+              <td>{{hero.five}}</td>
+              <td>{{hero.six}}</td>
+              <td>{{hero.seven}}</td>
+              <td>{{hero.eight}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
   </div>
 </div>
-
 
 <div class="row">
   <div class="col-12">
     <div class="text-center">
       <h3 style="margin-top: 30px">Прогрессивная конверсия вакансий/резюме</h3>
-      <table class="table" style="margin-top: 30px">
-        <thead>
-        <th>Категория</th>
-        <th>2015</th>
-        <th>2016</th>
-        <th>2017</th>
-        <th>2018</th>
-        <th>2019</th>
-        </thead>
-        <tbody>
-        <tr *ngFor="let hero of resumes">
-          <td>{{hero.category}}</td>
-          <td>{{hero.one}}</td>
-          <td>{{hero.two}}</td>
-          <td>{{hero.three}}</td>
-          <td>{{hero.four}}</td>
-          <td>{{hero.five}}</td>
-        </tr>
-        </tbody>
-      </table>
+      <div class="row" style="margin-top: 20px">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="text-center">
+            <table class="table table-bordered" style="margin-top: 30px">
+              <thead>
+              <th>Категория</th>
+              <th>2015</th>
+              <th>2016</th>
+              <th>2017</th>
+              <th>2018</th>
+              <th>2019</th>
+              </thead>
+              <tbody>
+              <tr *ngFor="let hero of resumes">
+                <td>{{hero.category}}</td>
+                <td>{{hero.one}}</td>
+                <td>{{hero.two}}</td>
+                <td>{{hero.three}}</td>
+                <td>{{hero.four}}</td>
+                <td>{{hero.five}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
     </div>
   </div>
 </div>
