@@ -8,6 +8,6 @@ export class VacancyService {
   constructor(private http: HttpClient) { }
 
   getVacancy(): Observable<any> {
-    return this.http.get('http://localhost:8080/vacancy/all');
+    return this.http.get('http://localhost:8080/resume_all');
   }
 }

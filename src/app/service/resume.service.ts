@@ -8,6 +8,6 @@ export class ResumeService {
   constructor(private http: HttpClient) {}
 
   getResume(): Observable<any> {
-    return this.http.get('http://localhost:8080/resume/all');
+    return this.http.get('http://localhost:8080/dynamic_all');
   }
 }
